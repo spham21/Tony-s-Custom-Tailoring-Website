@@ -1,0 +1,27 @@
+name: Generate Sitemap
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Generate sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: "https://tonyscustomtailoring.com"
+
+      - name: Commit and push sitemap
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          git commit -m "Auto-update sitemap [skip ci]" || echo "No changes to commit"
+          git push
