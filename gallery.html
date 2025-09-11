@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gallery - Tony's Custom Tailoring</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Glittery swirl background -->
+<div class="swirl-background">
+    <svg class="swirls" width="100%" height="100%" viewBox="0 0 1200 800" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#FFD700" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#FFA500" stop-opacity="0.6"/>
+        </linearGradient>
+        <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+          <stop offset="100%" stop-color="#DDDDDD" stop-opacity="1"/>
+        </linearGradient>
+        <circle id="spark" r="3.5" fill="white"/>
+        <circle id="spark2" r="2" fill="white" class="spark-small"/>
+        <circle id="spark3" r="4" fill="#FFD700" class="spark-large"/>
+      </defs>
+  
+      <!-- Gold swirls -->
+      <path id="gold1" d="M0 600 C300 230, 600 630, 1200 330" stroke="url(#goldGrad)" stroke-width="6" fill="gold" fill-opacity="0.1"/>
+      <path id="gold2" d="M0 600 C310 255, 610 655, 1210 333" stroke="url(#goldGrad)" stroke-width="4" fill="gold" fill-opacity="0.15"/>
+      <path id="gold3" d="M0 705 C210 600, 610 920, 1210 680" stroke="url(#goldGrad)" stroke-width="4" fill="gold" fill-opacity="0.1"/>
+  
+      <!-- Silver swirls -->
+      <path id="silver1" d="M0 700 C200 500, 600 900, 1200 700" stroke="url(#silverGrad)" stroke-width="3" fill="none"/>
+      <path id="silver2" d="M0 710 C210 520, 610 920, 1210 710" stroke="url(#silverGrad)" stroke-width="2" fill="none"/>
+  
+      <!-- Sparkles along paths -->
+      <use href="#spark">
+        <animateMotion dur="8s" repeatCount="indefinite" rotate="auto">
+          <mpath href="#gold1"/>
+        </animateMotion>
+      </use>
+      <use href="#spark2">
+        <animateMotion dur="15s" repeatCount="indefinite" rotate="auto">
+          <mpath href="#gold2"/>
+        </animateMotion>
+      </use>
+      <use href="#spark3">
+        <animateMotion dur="7s" repeatCount="indefinite" rotate="auto">
+          <mpath href="#gold2"/>
+        </animateMotion>
+      </use>
+      <use href="#spark">
+        <animateMotion dur="12s" repeatCount="indefinite" rotate="auto">
+          <mpath href="#silver1"/>
+        </animateMotion>
+      </use>
+      <use href="#spark">
+        <animateMotion dur="14s" repeatCount="indefinite" rotate="auto">
+          <mpath href="#silver1"/>
+        </animateMotion>
+      </use>
+      <use href="#spark">
+        <animateMotion dur="10s" repeatCount="indefinite" rotate="auto">
+          <mpath href="#silver2"/>
+        </animateMotion>
+      </use>
+    </svg>
+  </div>
+  
+<header>
+  <div class="brand">
+    <div class="logo">TC</div>
+    <div>
+      <h1>Tony's Custom Tailoring</h1>
+      <div style="font-size:13px;color:rgba(255,255,255,0.6)">Quality Bespoke & Alterations</div>
+    </div>
+  </div>
+  <nav>
+    <a href="index.html">About</a>
+    <a href="services.html">Services & Prices</a>
+    <a href="tetimonials.html">Testimonials</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="visit.html">Visit Us</a>
+    <a href="visit.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section id="gallery">
+  <div class="section-title">
+    <h3>Gallery</h3>
+    <div class="divider"></div>
+  </div>
+  <div class="gallery">
+    <img src="TonyStore.jpg" alt="store">
+    <img src="TonySewing.jpg" alt="sewing">
+    <img src="TonyAward.jpg" alt="award">
+  </div>
+</section>
+</main>
+
+<footer>
+  <div style="margin-bottom:8px">Follow us</div>
+  <div class="socials">
+    <a href="https://www.yelp.com/biz/tony-custom-tailoring-irvine-4?osq=Tony+Custom+Tailoring" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="Yelp">
+    </a>
+    <a href="https://www.facebook.com/tonycustomtailoring/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+      </a>
+  </div>      
+  <div style="margin-top:12px;color:var(--muted)">© 2025 Tony's Custom Tailoring</div>
+</footer>
+
+</body>
+</html>
