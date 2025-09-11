@@ -1,27 +1,28 @@
-name: Generate Sitemap
-
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Generate sitemap
-        uses: cicirello/generate-sitemap@v1
-        with:
-          base-url-path: "https://tonyscustomtailoring.com"
-
-      - name: Commit and push sitemap
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add sitemap.xml
-          git commit -m "Auto-update sitemap [skip ci]" || echo "No changes to commit"
-          git push
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://tonyscustomtailoring.com/</loc>
+    <lastmod>2025-09-09</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://tonyscustomtailoring.com/services.html</loc>
+    <lastmod>2025-09-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tonyscustomtailoring.com/gallery.html</loc>
+    <lastmod>2025-09-09</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tonyscustomtailoring.com/testimonials.html</loc>
+    <lastmod>2025-09-09</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tonyscustomtailoring.com/contact.html</loc>
+    <lastmod>2025-09-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+</urlset>
